@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Experience() {
-  const [activeTab, setActiveTab] = useState("anvesh")
+  const [activeTab, setActiveTab] = useState("anvesh");
 
   const experiences = [
     {
@@ -28,7 +34,7 @@ export default function Experience() {
       id: "palm",
       company: "Palm Mind Technologies",
       position: "Full Stack Developer",
-      period: "Mar 2024 – Sept 2024",
+      period: "Mar 2023 – Sept 2024",
       responsibilities: [
         "Building custom dashboard applications",
         "Improving dashboard performance by 80% by upgrading from Angular 7 to Angular 17",
@@ -37,10 +43,13 @@ export default function Experience() {
         "Revamping and optimizing backend code",
       ],
     },
-  ]
+  ];
 
   return (
-    <section id="experience" className="min-h-screen w-full py-24 px-4 md:px-10 snap-start flex items-center">
+    <section
+      id="experience"
+      className="min-h-screen w-full py-24 px-4 md:px-10 snap-start flex items-center"
+    >
       <motion.div
         className="max-w-5xl mx-auto w-full"
         initial={{ opacity: 0, y: 30 }}
@@ -52,7 +61,9 @@ export default function Experience() {
         }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h2 className="text-4xl font-bold mb-16 text-center">Work Experience</h2>
+        <h2 className="text-4xl font-bold mb-16 text-center">
+          Work Experience
+        </h2>
 
         <div className="relative">
           {/* Vertical line */}
@@ -73,13 +84,21 @@ export default function Experience() {
                 <div className="absolute left-0 md:left-1/2 w-5 h-5 bg-blue-600 rounded-full transform -translate-x-1/2 z-10 mt-1.5"></div>
 
                 {/* Content */}
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
+                <div
+                  className={`w-full md:w-1/2 ${
+                    index % 2 === 0 ? "md:pl-8" : "md:pr-8"
+                  }`}
+                >
                   <Card className="border-none bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-all">
                     <CardHeader>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                         <div>
-                          <CardTitle className="text-2xl text-blue-400">{exp.company}</CardTitle>
-                          <CardDescription className="text-lg text-gray-300">{exp.position}</CardDescription>
+                          <CardTitle className="text-2xl text-blue-400">
+                            {exp.company}
+                          </CardTitle>
+                          <CardDescription className="text-lg text-gray-300">
+                            {exp.position}
+                          </CardDescription>
                         </div>
                         <span className="px-4 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">
                           {exp.period}
@@ -92,7 +111,10 @@ export default function Experience() {
                           <motion.li
                             key={idx}
                             className="flex items-start gap-2 text-gray-300"
-                            initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
+                            initial={{
+                              opacity: 0,
+                              x: index % 2 === 0 ? 20 : -20,
+                            }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3, delay: idx * 0.1 }}
                             viewport={{ once: true }}
@@ -111,5 +133,5 @@ export default function Experience() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
