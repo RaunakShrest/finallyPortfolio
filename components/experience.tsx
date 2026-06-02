@@ -28,7 +28,7 @@ export default function Experience() {
       id: "palm",
       company: "Palm Mind Technologies",
       position: "Full Stack Developer",
-      period: "Mar 2024 – Sept 2024",
+      period: "Mar 2023 – Sept 2024",
       responsibilities: [
         "Building custom dashboard applications",
         "Improving dashboard performance by 80% by upgrading from Angular 7 to Angular 17",
